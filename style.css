@@ -1,0 +1,211 @@
+/* Global variables for color scheme */
+:root {
+    --gradient: linear-gradient(
+        180deg,
+        rgba(45, 112, 1253, 0.73) 0%,
+        #ffc6f9 100%
+    );
+    --dark: #001747;
+    --grey: #b1bacb;
+    --grey-border: rgba(210, 210, 210, 0.75);
+    --grey-light: #eeeeee;
+    --grey-dark: $405175; /* Variable seems to be undefined, possibly a typo */
+    --pink: #fd2d84;
+    --yellow: #fbff0e;
+    --white: #ffffff;
+}
+
+/* Styling for the body */
+body {
+    background: var(--gradient);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Button styling */
+.btn {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--pink);
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+/* Resetting margins for heading and paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* Todo Container styling */
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: var(--white);
+    padding: 3rem;
+    height: 50%;
+    width: 60%;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+    max-width: 30rem;
+}
+
+/* Styling for heading level 2 */
+h2 {
+    text-transform: uppercase;
+    height: 3rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+/* Styling for input container */
+.input {
+    position: relative;
+    display: flex;
+}
+
+/* Styling for input field */
+.input-field {
+    width: 100%;
+    border: 0.06rem solid #d2d2d2bf;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    font-size: 1rem;
+}
+
+/* Styling for placeholder text in input field */
+input[type="text"]::placeholder {
+    color: var(--grey);
+}
+
+/* Styling for todo container */
+.todo-container {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Styling for unordered list */
+ul {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+/* Styling for list items */
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.3rem;
+}
+
+/* Styling for paragraphs within todo list */
+#todoList p {
+    display: flex;
+    gap: 1rem;
+    color: var(--dark);
+    align-items: center;
+}
+
+/* Styling for disabled items in todo list */
+#todoList .disabled {
+    color: #8f98a8;
+}
+
+/* Styling for disabled class */
+.disabled {
+    display: flex;
+    text-decoration: line-through;
+}
+
+/* Styling for checkbox input */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Styling for checkbox before pseudo-element */
+input[type="checkbox"]::before {
+    content: "\2713";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    border: 0.06rem solid var(--grey-border);
+    border-radius: 50%;
+    color: transparent;
+}
+
+/* Styling for checked checkbox before pseudo-element */
+input[type="checkbox"]:checked::before {
+    color: var(--white);
+    background-color: var(--yellow);
+    border: 0.06rem solid var(--yellow);
+    border-radius: 50%;
+}
+
+/* Styling for counter element */
+.counter {
+    border: 0.06rem solid var(--grey-light);
+}
+
+/* Styling for counter container */
+.counter-container {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--grey);
+}
+
+/* Styling for counter container paragraphs */
+.counter-container p {
+    align-self: center;
+}
+
+/* Styling for counter container button */
+.counter-container button {
+    border: none;
+    background-color: transparent;
+    color: var(--grey);
+    font-size: 1rem;
+}
+
+/* Styling for scrollable container */
+.scroll {
+    height: 15rem;
+    scrollbar-width: thin;
+}
+
+/* Styling for scrollbar in Webkit browsers */
+.scroll::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+/* Styling for scrollbar thumb in Webkit browsers */
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--pink);
+    border-radius: 0.5rem;
+}
+
+/* Styling for scrollbar track in Webkit browsers */
+.scroll::-webkit-scrollbar-track {
+    display: none;
+}

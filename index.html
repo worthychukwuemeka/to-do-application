@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Linking external stylesheet for styling -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Defer loading of the script.js file until the document is parsed -->
+    <script src="script.js" defer></script>
+
+    <!-- Preconnecting to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Linking the DM Sans font family from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap"
+        rel="stylesheet">
+    
+    <!-- Title of the HTML document -->
+    <title>Day 17 - Todo Application</title>
+</head>
+
+<body>
+    <!-- Todo section containing the todo list -->
+    <section class="todo">
+        <!-- Heading for the todo list -->
+        <h2>To-do list</h2>
+        
+        <!-- Input field and button for adding new todos -->
+        <div class="input">
+            <input type="text" class="input-field" id="todoInput" placeholder="Add a new todo" />
+            <button class="btn">Add</button>
+        </div>
+        
+        <!-- Unordered list for displaying todos -->
+        <ul class="scroll">
+            <!-- Placeholder list item with id 'todoList' -->
+            <li id="todoList"></li>
+        </ul>
+        
+        <!-- Container for todo count and delete button -->
+        <div>
+            <!-- Horizontal rule for separation -->
+            <hr class="counter" />
+            
+            <!-- Container for displaying todo count and delete button -->
+            <div class="counter-container">
+                <!-- Paragraph displaying the total number of items -->
+                <p><span id="todoCount">0</span> items total</p>
+                
+                <!-- Button for deleting all todos -->
+                <button id="deleteButton">Delete All</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
